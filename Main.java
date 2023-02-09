@@ -1,46 +1,39 @@
 public class Main {
     public static void main(String[] args) {
-
-    Persona persona = new Persona();
-
-    persona.setEdad(17);
-    int edad = persona.getEdad();
-    System.out.println(edad);
-
-    persona.setNombre("Delfina Aylen Bravo");
-    String nombre = persona.getNombre();
-    System.out.println(nombre);
-
-    persona.setNumeroTelefono(3105);
-    int numeroTelefono = persona.getNumeroTelefono();
-    System.out.println(numeroTelefono);
-
+        Persona persona = new Persona();
+        Cliente cliente = new Cliente();
+        cliente.numeroTelefono = 1122334455;
+        cliente.nombre = "Delfina";
+        cliente.edad = 17;
+        cliente.credito = 1;
+        System.out.println(cliente.credito);
+        System.out.println(cliente.edad);
+        System.out.println(cliente.nombre);
+        System.out.println(cliente.numeroTelefono);
+        System.out.println("esto es parte de la clase cliente");
+        Trabajador trabajador = new Trabajador();
+        trabajador.numeroTelefono = 1122334455;
+        trabajador.nombre = "Delfina";
+        trabajador.edad = 17;
+        trabajador.salario = 1;
+        System.out.println(cliente.credito);
+        System.out.println(cliente.edad);
+        System.out.println(cliente.nombre);
+        System.out.println(cliente.numeroTelefono);
+        System.out.println("esto es parte de la clase trabajador");
     }
 }
 class Persona {
-    private int edad;
-    private String nombre;
-    private int numeroTelefono;
+    int edad;
+    String nombre;
+    int numeroTelefono;
+}
 
-    public void setEdad(int valor){
-        this.edad = valor;
-    }
-    public int getEdad (){
-        return this.edad;
-    }
+class Cliente extends Persona {
+    int credito;
+}
 
-    public void setNombre(String valor){
-        this.nombre = valor;
-    }
-    public String getNombre(){
-        return this.nombre;
-    }
-
-    public void setNumeroTelefono(int valor){
-        this.numeroTelefono = valor;
-    }
-    public int getNumeroTelefono(){
-        return this.numeroTelefono;
-    }
+class Trabajador extends Persona{
+    int salario;
 
 }
